@@ -10,7 +10,7 @@ os.system("echo \"finished removing docs\"")
 os.system("doxygen /Users/zijianzhou/Documents/Python/utils/docs/Doxyfile")
 os.system("echo \"finished generating docs\"")
 # not sure about the address
-copyline = "sshpass -p raspberrypi scp /Users/zijianzhou/Documents/Python/utils/docs pi@172.168.22.31:~/usbdrv/monsterfarmdocs/"
+copyline = "sshpass -p \"raspberry\" scp -r /Users/zijianzhou/Documents/Python/utils/docs/html pi@172.22.31.168:/home/pi/usbdrv/docs/monsterfarm"
 os.system(copyline)
 os.system("echo \"finish copying docs\"")
 import paramiko
